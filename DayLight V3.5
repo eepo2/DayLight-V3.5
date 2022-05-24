@@ -115,39 +115,6 @@ class Design:
 
 
 """
-app_name = "Daylight v3"
-def HostName() -> int:
-    ip = requests.get("https://api.ipify.org/?format=text").text
-    return ip
-def Check_File():
-        host = open("C:\Windows\System32\drivers\etc\hosts").read() # Go to The File ' host ' Check If use Dns Spofing
-        if host.__contains__("falcon-society"): # Name Of Website
-            print("The Host Uses DnsSpofing Enter To Exit :)")
-            input()
-            exit(0)
-    
-def active():
-    IpAddress = HostName()
-    req = requests.get('https://falcon-society.com/active_link/'+app_name+"/"+IpAddress) # Url For your Active
-    if req.headers["Server"] != "cloudflare": # Check on the server what is used by the host
-        print("The Server Uses DnsSpofing Enter To Exit :)")
-        input()
-        exit(0)
-
-
-    if "True" in req.text:
-        pass
-    else:
-
-        print(f"{IpAddress} Isn't Active Please Contact With 31421 - 1k3k")
-        input()
-        exit(0)
-    
-    Check_File()
-
-
-#active()
-
 
 
 
